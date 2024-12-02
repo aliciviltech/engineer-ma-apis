@@ -1,0 +1,14 @@
+.MainBody{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.MainBody table{
+    width: 300px;
+}
+.MainBody table td{
+    height: 30px;
+}

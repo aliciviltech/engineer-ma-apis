@@ -1,0 +1,15 @@
+.Hero{
+    width: 80%;
+    margin: auto;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.Hero h1{
+    font-size: 60px;
+}
+.Hero h2{
+    line-height: 40px;
+}
