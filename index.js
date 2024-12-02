@@ -7,7 +7,9 @@ const app = express();
 dotenv.config()
 
 
-
+app.get('/',(req,res)=>{
+    res.status(200).send('welcome backed')
+})
 app.get('/posts',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:posts})
 })
