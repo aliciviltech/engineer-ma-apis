@@ -1,26 +1,36 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import { albums, comments, photos, posts, todos, users } from './allData.js';
-const router = express();
 
 
-router.get('/posts',(req,res)=>{
+const app = express();
+dotenv.config()
+
+
+
+app.get('/posts',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:posts})
 })
-router.get('/comments',(req,res)=>{
+app.get('/comments',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:comments})
 })
-router.get('/albums',(req,res)=>{
+app.get('/albums',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:albums})
 })
-router.get('/photos',(req,res)=>{
+app.get('/photos',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:photos})
 })
-router.get('/todos',(req,res)=>{
+app.get('/todos',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:todos})
 })
-router.get('/users',(req,res)=>{
+app.get('/users',(req,res)=>{
     res.status(200).send({status:200,message:"success",data:users})
 })
-router.listen(8800,()=>{
-    console.log('server started: 8800')
+
+const PORT = process.env.PORT;
+console.log(PORT)
+
+
+app.listen(PORT,()=>{
+    console.log('server started')
 })
